@@ -163,3 +163,24 @@
     background-color: var(--light-color);
     color: #333;
 }
+
+/* Text Sizes */
+.lead {
+    font-size: 20px;
+}
+
+.sm {
+    font-size: 1rem;
+}
+
+.md {
+    font-size: 2rem;
+}
+
+.lg {
+    font-size: 3rem;
+}
+
+.xl {
+    font-size: 4rem;
+}
