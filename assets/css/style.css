@@ -6,6 +6,8 @@
   --secondary-color: #1c3fa8;
   --dark-color: #002240;
   --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
 }
 
 /* Selects all elements */
@@ -44,6 +46,18 @@ p {
 
 img {
   width: 100%;
+}
+
+code,
+pre {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
 }
 
 /* navbar style */
@@ -93,6 +107,10 @@ img {
   overflow: visible;
 }
 
+.showcase-txt {
+  animation: slideFromLeft 1s ease-in;
+}
+
 .showcase-form {
   position: relative;
   top: 60px;
@@ -101,6 +119,7 @@ img {
   padding: 40px;
   z-index: 100;
   justify-self: end;
+  animation: slideFromRight 1s ease-in;
 }
 
 .showcase-form .form-control {
@@ -138,6 +157,7 @@ img {
 /* Stats */
 .stats {
   padding-top: 100px;
+  animation: slideFromBottom 1s ease-in;
 }
 
 .stats-heading {
@@ -191,7 +211,8 @@ img {
 }
 
 /* Features */
-.features-head img {
+.features-head img,
+.docs-head img {
   width: 200px;
   justify-self: flex-end;
 }
@@ -217,9 +238,67 @@ img {
   grid-column: 1 / span 2;
 }
 
+/* docs */
+.docs-main h3 {
+  margin: 20px 0;
+}
+
+.docs-main .grid {
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+}
+
+.docs-main nav ul li {
+  font-size: 17px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px #ccc solid;
+}
+
+.docs-main a:hover {
+  font-weight: bold;
+}
+
 /* footer */
 .footer .social a {
   margin: 0 10px;
+}
+
+/********** Animations *********/
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /********** Responsive *********/
@@ -229,7 +308,9 @@ img {
   .showcase .grid,
   .stats .grid,
   .cli .grid,
-  .cloud .grid {
+  .cloud .grid,
+  .docs-main .grid,
+  .features-main .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
@@ -241,16 +322,35 @@ img {
   .showcase-txt {
     text-align: center;
     margin-top: 40px;
+    animation: slideFromTop 1s ease-in;
   }
 
   .showcase-form {
     justify-self: center;
     margin: auto;
+    animation: slideFromBottom 1s ease-in;
   }
 
   .cli .grid > *:first-child {
     grid-column: 1;
     grid-row: 1;
+  }
+
+  .features-head,
+  .features-subHead,
+  .docs-head {
+    text-align: center;
+  }
+
+  .features-head img,
+  .features-subHead img,
+  .docs-head img {
+    justify-self: center;
+  }
+
+  .features-main .grid > *:first-child,
+  .features-main .grid > *:nth-child(2) {
+    grid-column: 1;
   }
 }
 

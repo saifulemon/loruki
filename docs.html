@@ -1,62 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- font-awesome cdn -->
-    <link rel="stylesheet" href="./assets/css/utilities.css"> <!--utilities stylesheet -->
-    <link rel="stylesheet" href="./assets/css/style.css"> <!--custom stylesheet -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="./assets/css/utilities.css" />
+    <!--utilities stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!--custom stylesheet -->
     <title>Loruki | Cloud Hosting For Everyone</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navbar -->
     <header class="navbar">
-        <div class="container flex">
-            <h1 class="logo">Loruki.</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="docs.html">Docs</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container flex">
+        <h1 class="logo">Loruki.</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="docs.html">Docs</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Head -->
-    <section class="features-head bg-primary py-3">
-        <div class="container grid">
-            <div>
-                <h1 class="xl">Docs</h1>
-                <p class="lead">Learn how to work with the Loruki Platform</p>
-            </div>
-            <img src="./assets/images/docs.png" alt="server">
+    <section class="docs-head bg-primary py-3">
+      <div class="container grid">
+        <div>
+          <h1 class="xl">Docs</h1>
+          <p class="lead">Learn how to work with the Loruki Platform</p>
         </div>
+        <img src="./assets/images/docs.png" alt="server" />
+      </div>
+    </section>
+
+    <!-- docs main -->
+    <section class="docs-main my-4">
+      <div class="container grid">
+        <div class="card bg-light p-3">
+          <h3 class="my-2">Essentials</h3>
+          <nav>
+            <ul>
+              <li><a href="" class="text-primary">Introduction</a></li>
+              <li><a href="">About Loruki</a></li>
+              <li><a href="">Installation</a></li>
+            </ul>
+          </nav>
+          <h3 class="my-2">Deployment</h3>
+          <nav>
+            <ul>
+              <li><a href="">Setting up a Container</a></li>
+              <li><a href="">Using the CLI</a></li>
+              <li><a href="">Managing resource</a></li>
+              <li><a href="">Upgrade & downgrade</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="card">
+          <h2>Introduction</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+            voluptatem ducimus reprehenderit! Minima velit illo ut magnam
+            corrupti magni expedita. Quo esse possimus dolor ad debitis nobis
+            saepe ullam maxime?
+          </p>
+          <div class="alert alert-success">
+            <i class="fas fa-info"></i> Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit dolores, quae eius.
+          </div>
+          <h3>Lorem Explicabo sequi</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora
+            esse, deleniti sunt non veniam placeat, dolores, quae eius
+            blanditiis perferendis dicta! Earum aperiam aspernatur temporibus
+            corrupti voluptate eos iure consequuntur.
+          </p>
+          <a href="#" class="btn btn-primary">Install CLI</a>
+
+          <h3>Requirements</h3>
+          <ul>
+            <li>Windows 10, Mac OSX, Linux</li>
+            <li>Node.js v12 or heigher</li>
+          </ul>
+
+          <h3>Install</h3>
+          <p>Mac (Homebrew)</p>
+          <pre><code>$ brew install loruki-cli</code></pre>
+          <p>npm</p>
+          <pre><code>$ npm install loruki-cli</code></pre>
+          <p>yarn</p>
+          <pre><code>$ yarn install loruki-cli</code></pre>
+        </div>
+      </div>
     </section>
 
     <!-- footer -->
     <footer class="footer bg-dark py-5">
-        <div class="container grid grid-3">
-            <div>
-                <h1>Loruki</h1>
-                <p>Copyright &copy; 2023</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="docs.html">Docs</a></li>
-                </ul>
-            </nav>
-            <div class="social">
-                <a href="https://www.github.com/saifulemon"><i class="fab fa-github fa-2x"></i></a>
-                <a href="https://www.linkedin.com/in/saiful-emon"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://www.facebook.com/dev.saifulemon"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="https://www.instagram.com/saiful_emon1"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="https://twitter.com/SaifulEmon20"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
+      <div class="container grid grid-3">
+        <div>
+          <h1>Loruki</h1>
+          <p>Copyright &copy; 2023</p>
         </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="docs.html">Docs</a></li>
+          </ul>
+        </nav>
+        <div class="social">
+          <a href="https://www.github.com/saifulemon"
+            ><i class="fab fa-github fa-2x"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/saiful-emon"
+            ><i class="fab fa-linkedin fa-2x"></i
+          ></a>
+          <a href="https://www.facebook.com/dev.saifulemon"
+            ><i class="fab fa-facebook fa-2x"></i
+          ></a>
+          <a href="https://www.instagram.com/saiful_emon1"
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+          <a href="https://twitter.com/SaifulEmon20"
+            ><i class="fab fa-twitter fa-2x"></i
+          ></a>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
