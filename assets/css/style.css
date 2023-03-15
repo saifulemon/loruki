@@ -372,7 +372,7 @@ pre {
 
 @media screen and (max-width: 375px) {
   .showcase-form {
-    height: 250px;
+    height: auto;
     width: 300px;
     justify-self: center;
     margin: auto;
